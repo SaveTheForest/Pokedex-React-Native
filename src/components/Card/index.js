@@ -1,10 +1,12 @@
 import React from "react";
 
 import * as Style from "./styled";
-export default function Card({ data }) {
+export default function Card({ data, detail }) {
   return (
-    <Style.Container type={data.types[0].type.name}>
-        {console.log(data.types[0].type.name)}
+    <Style.Container
+        onPress={()=> detail(data)}
+     type={data.types[0].type.name}>
+      
       <Style.PokeID type={data.types[0].type.name}>
         {data.id >= 1 && data.id <= 9
           ? "#00" + data.id
