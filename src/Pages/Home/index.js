@@ -18,47 +18,57 @@ export default function Home({navigation}) {
   const handleDetails = (item)=>{
     console.log(item.name)
     navigation.navigate('Details',{
-      id: item.id
+      id: item.id,
+      name: item.name,
+      height: item.height,
+      types: item.types,
+      weight: item.weight,
+      stats: item.stats,
+      abilities:item.abilities
     })
   }
 
   useEffect(() => {
     async function pokeLoad() {
-      const response = await PokeApi.get("/pokemon?offset=0&limit=100");
+      const response = await PokeApi.get("/pokemon?offset=0&limit=299");
       const { results } = response.data;
 
       const getInfos = await Promise.all(
         results.map(async (item) => {
-          const { id, types, name, weight } = await Infos(item.url);
-        
-          return { id, types, name, weight };
+          const { id, types, name, weight, height, stats,abilities } = await Infos(item.url);
+          console.log(abilities[0].ability.name)
+          return { id, types, name, weight, height,stats,abilities };
          
+     
 
         })
    
       );
-     
+    
       setPokemonsInfos(getInfos);
+     
 
      
      
       
     }
 
-    
+   
 
     pokeLoad();
+    
     
   }, []);
   async function Infos(url) {
     const response = await PokeApi.get(url);
-    const { id, types, name, weight } = response.data;
+    const { id, types, name, weight, height, stats,abilities } = response.data;
 
     return {
       id,
       types,
       name,
       weight,
+      height,stats,abilities
     };
   }
   return (
