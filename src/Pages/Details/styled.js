@@ -1,6 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components/native";
 import theme from "../../theme/theme";
+import * as Progress from 'react-native-progress'
+
 
 export const Container = styled.View`
   ${({ type }) => css`
@@ -11,7 +13,7 @@ export const Container = styled.View`
 export const Header = styled.View`
   width: 100%;
   height: 10%;
-  padding: 15px;
+  padding: 20px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -20,7 +22,8 @@ export const Header = styled.View`
 export const PokeName = styled.Text`
   font-size: 32px;
   color: #fff;
-  font-weight: bold;
+  font-weight: bold; 
+  margin-right: 35%;
 `;
 export const PokeID = styled.Text`
   font-size: 18px;
@@ -78,7 +81,7 @@ export const About = styled.Text`
   ${({ type }) => css`
     color: ${theme.colors.colorTypes[type]};
   `}
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
 `;
 export const InfoAbouts = styled.View`
@@ -94,7 +97,7 @@ export const InfoWeight = styled.View`
   justify-content: center;
 align-items: center;
   border-color: #929292;
-  border-right-width: 2px;
+  border-right-width: 1.5px;
 `;
 export const InfoMoves = styled.View`
   height: 70px;
@@ -108,3 +111,33 @@ export const TextAboutsInfo = styled.Text`
   margin-top: 10px;
 
 `;
+export const Line = styled.View`
+ height: 100%;
+ width: 1.5px;
+ background-color:#929292;
+ margin-left: 10px;
+
+
+`
+export const StatsName = styled.Text`
+  ${({ type }) => css`
+    color: ${theme.colors.colorTypes[type]};
+  `}
+ 
+    font-size: 14px;
+    font-weight: 800;
+    text-align:center;
+
+`
+export const BaseStatsView = styled.View`
+  flex-direction: row;
+
+  height: 100px;
+  margin-top: 15px;
+  align-items: flex-end;
+  justify-items: flex-end;
+
+`
+export const ProgressBar = styled(Progress.Bar)`
+background-color: aliceblue;
+`

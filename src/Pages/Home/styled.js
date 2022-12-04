@@ -10,6 +10,7 @@ export const Header = styled.View`
     height: 10%;
     padding: 15px;
     flex-direction: row;
+ 
 `
 export const LogoName = styled.Text`
 padding-left: 15px;

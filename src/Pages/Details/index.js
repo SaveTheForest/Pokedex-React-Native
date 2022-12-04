@@ -6,6 +6,10 @@ import {
   MaterialCommunityIcons,
   FontAwesome5,
 } from "@expo/vector-icons";
+
+import theme from "../../theme/theme";
+
+
 export default function Details({ navigation, route }) {
   const goBackIcon = <Ionicons name="arrow-back" size={32} color="#FFF" />;
 
@@ -41,6 +45,7 @@ export default function Details({ navigation, route }) {
             uri: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${route.params.id}.png`,
           }}
         />
+        
       </Style.ImageView>
       <Style.Details>
         <Style.LineType>
@@ -87,8 +92,57 @@ export default function Details({ navigation, route }) {
             <Style.TextAboutsInfo>Moves</Style.TextAboutsInfo>
           </Style.InfoMoves>
         </Style.InfoAbouts>
-        <Style.About type={route.params.types[0].type.name}>Base Stats</Style.About>
+        <Style.About type={route.params.types[0].type.name}>
+          Base Stats
+        </Style.About>
+        <Style.BaseStatsView>
+          <Style.StatsName type={route.params.types[0].type.name}>
+            HP{"\n"}ATK{"\n"}DEF{"\n"}SATK{"\n"}SDEF{"\n"}SPD
+          </Style.StatsName>
+          <Style.Line />
+          <Text >
+          
+          {route.params.stats.map((item) => (
+              <Text>
+             {item.base_stat < 100 ?"    0"+item.base_stat:"    "+item.base_stat}{"\n"}
+                  
+              </Text>
+            ))
+            
+            }
+            
+          </Text>
+          <View style={{flexDirection:'column'}}>
+            
+
+           
+        {route.params.stats.map((item) => (
+             
+
+             <View key={item.stat.name} style={{marginLeft:15,paddingTop:13}}> 
+
+               <Style.ProgressBar
+               
+            color={theme.colors.colorTypes[route.params.types[0].type.name]}
+            progress={item.base_stat/200} width={260}
+          height={5}
+            borderWidth={0}
+
+           
+            
+            />
+          </View>
+            
+            ) )
+            
+            }
+             
+            </View>
+          
+           
+        </Style.BaseStatsView>
         
+           
       </Style.Details>
     </Style.Container>
   );
