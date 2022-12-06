@@ -9,9 +9,6 @@ import { FlatList, Image, StatusBar } from "react-native";
 export default function Home({ navigation }) {
   const [pokemonsInfos, setPokemonsInfos] = useState([]);
 
-
-  
-
   const handleDetails = (item) => {
     navigation.navigate("Details", {
       id: item.id,
@@ -61,9 +58,10 @@ export default function Home({ navigation }) {
     <Style.Container>
       <StatusBar />
       <Style.Header>
-      <Image 
-      style={{width:44,height:44}}
-      source={require('../../assets/images/pokemon.png')}/>
+        <Image
+          style={{ width: 44, height: 44 }}
+          source={require("../../assets/images/pokemon.png")}
+        />
         <Style.LogoName>Pokédex</Style.LogoName>
       </Style.Header>
 
