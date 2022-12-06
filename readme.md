@@ -5,6 +5,10 @@
 - [Preview do projeto](#-preview-do-projeto)
 - [Funcionalidades](#-Funcionalidades)
 - [Download](#-Download)
+- ---
+## Sobre
+
+Projeto de Pokedex para ultilizar a api POKEAPI
 
 ---
 
@@ -14,7 +18,7 @@
 Video do projeto
 
 <div>
-<video width="200" autoplay="true" loop="true" controls src="">
+<video width="200" autoplay="true" loop="true" controls src="https://vimeo.com/778390104">
 </video>
 </div>
 
