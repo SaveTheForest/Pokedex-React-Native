@@ -5,6 +5,7 @@
 - [Preview do projeto](#-preview-do-projeto)
 - [Funcionalidades](#-Funcionalidades)
 - [Download](#-Download)
+- [Sobre](#-Sobre)
 - ---
 ## Sobre
 
@@ -18,7 +19,8 @@ Projeto de Pokedex para ultilizar a api POKEAPI
 
 <div>
 
-  <img style="margin: 5px" alt="home" src="https://i.ibb.co/6m13WNK/Pokedex.gif" width="200">
+  ![](https://github.com/SaveTheForest/Pokedex-React-Native/blob/main/src/assets/gif/Pokedex.gif)
+
 
 </div>
 
