@@ -15,12 +15,11 @@ Projeto de Pokedex para ultilizar a api POKEAPI
 
 ## Preview do projeto
 
-Video do projeto
 
 <div>
-<video width="200" autoplay="true" loop="true" controls src="https://i.ibb.co/6m13WNK/Pokedex.gif">
- 
-</video>
+
+  <img style="margin: 5px" alt="home" src="https://i.ibb.co/6m13WNK/Pokedex.gif" width="200">
+
 </div>
 
 Prints do projeto
