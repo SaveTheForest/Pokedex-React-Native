@@ -21,8 +21,8 @@ Video do projeto
 Prints do projeto
 
 <div>
-  <img style="margin: 5px" alt="home" src="[https://i.ibb.co/wQSTZyj/Screenshot-2022-12-06-04-26-57-959-com-atlaspose-Pokedex.jpg](https://i.ibb.co/wQSTZyj/Screenshot-2022-12-06-04-26-57-959-com-atlaspose-Pokedex.jpg)" width="200">
-  <img style="margin: 5px" alt="details" src="https://i.ibb.co/wQSTZyj/Screenshot-2022-12-06-04-26-57-959-com-atlaspose-Pokedex.jpg" width="200">
+  <img style="margin: 5px" alt="home" src="https://i.ibb.co/wQSTZyj/Screenshot-2022-12-06-04-26-57-959-com-atlaspose-Pokedex.jpg" width="200">
+  <img style="margin: 5px" alt="details" src="https://i.ibb.co/hVnb6G9/Screenshot-2022-12-06-04-27-03-771-com-atlaspose-Pokedex.jpg" width="200">
  
 </div>
 
